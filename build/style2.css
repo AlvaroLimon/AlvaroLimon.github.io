@@ -54,6 +54,10 @@ body {
     background-color: var(--background-primary);
 }
 
+.nav-item:focus {
+    background-color: var(--background-primary);
+}
+
 .nav-icon {
     width: 5rem;
     height: 5rem;

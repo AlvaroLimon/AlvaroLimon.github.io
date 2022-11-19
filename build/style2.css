@@ -100,3 +100,64 @@ main {
 p {
     font-size: 14px;
 }
+
+/*Large screens*/
+@media only screen and (min-width:600px) {
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+}
+
+/*Small screens*/
+@media only screen and (max-width:600px) {
+    body {
+        overflow: hidden;
+    }
+
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+
+        display: flex;
+        flex-direction: row;
+
+        justify-content: center;
+
+        transition: width 0s;
+    }
+
+    .navbar:hover {
+        width: 100vw;
+    }
+
+    .nav-item {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        width: 20%;
+    }
+
+    .nav-link {
+        display: none;
+    }
+
+    .nav-icon {
+        max-width: 5rem;
+        max-height: 5rem;
+        bottom: 0;
+    }
+
+    .nav-item:last-child {
+        margin-top: auto;
+    }
+
+    main {
+        margin-left: 0;
+        padding: 2rem;
+    }
+}

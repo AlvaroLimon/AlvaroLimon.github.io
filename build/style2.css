@@ -92,14 +92,17 @@ body {
 /*MAIN*/
 
 main {
-    margin-left: 6rem;
-    padding: 1rem;
+    margin-left: 5rem;
+    padding: 2rem;
     color: var(--text-secondary);
 }
 
-p {
+main p {
     font-size: 14px;
+    text-align: justify;
+    text-justify: inter-word;
 }
+
 
 /*Large screens*/
 @media only screen and (min-width:600px) {
@@ -112,8 +115,14 @@ p {
 
 /*Small screens*/
 @media only screen and (max-width:600px) {
-    body {
-        overflow: hidden;
+    body::-webkit-scrollbar {
+        width: 0.25rem;
+    }
+    body::-webkit-scrollbar-track {
+        background-color: var(--background-primary);
+    }
+    body::-webkit-scrollbar-thumb {
+        background-color: var(--background-secondary);
     }
 
     .navbar {
